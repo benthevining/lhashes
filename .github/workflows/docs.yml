@@ -63,7 +63,7 @@ jobs:
       run: cmake --preset ${{ env.CMAKE_PRESET }}
 
     - name: Build docs
-      run: cmake --build --preset ${{ env.CMAKE_PRESET }} --target lharmony_docs
+      run: cmake --build --preset ${{ env.CMAKE_PRESET }} --target lhashes_docs
 
     - name: Clone docs branch
       uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab   # pin@v3
