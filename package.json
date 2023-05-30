@@ -141,10 +141,6 @@
               "path": "CHANGELOG.md"
             },
             {
-              "label": "Source code",
-              "path": "source-code.tar"
-            },
-            {
               "label": "Linux Clang (Shared)",
               "name": "Linux-Clang-Shared.zip",
               "path": "deploy/ubuntu-latest-clang-ON.zip"
@@ -274,7 +270,8 @@
               "name": "MacOS-XCode-Static.zip",
               "path": "deploy/macos-latest-xcode-OFF.zip"
             }
-          ]
+          ],
+          "assignees": "benthevining"
         }
       ]
     ]

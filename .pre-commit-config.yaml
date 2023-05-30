@@ -45,7 +45,7 @@ fail_fast: false
 minimum_pre_commit_version: 2.20.0
 
 ci:
-  skip: [cppcheck, check-jsonschema] # clang-tidy
+  skip: [cppcheck, check-jsonschema, sign-commit] # clang-tidy
   autofix_commit_msg: 'style: pre-commit autofixes [skip ci]'
   autoupdate_commit_msg: 'chore: pre-commit autoupdate [skip ci]'
 
