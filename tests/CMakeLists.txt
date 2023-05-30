@@ -55,7 +55,7 @@ catch_discover_tests (
 		--warn NoAssertions
 		--order rand
 		--verbosity high
-	TEST_PREFIX "Limes.hashes.unit.")
+	TEST_PREFIX "limes.hashes.unit.")
 # cmake-format: on
 
 option (LHASH_BENCH "Build the lhashes benchmarks" ON)
@@ -80,3 +80,5 @@ if (LHASH_BENCH)
 		SOURCES bench.cpp)
 
 endif ()
+
+add_subdirectory (FindPackage)

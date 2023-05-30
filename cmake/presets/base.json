@@ -59,7 +59,7 @@
       },
       "filter": {
         "include": {
-          "name": "^Limes.hashes.+"
+          "name": "^limes.hashes.+"
         }
       },
       "hidden": true,
