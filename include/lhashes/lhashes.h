@@ -63,7 +63,7 @@
 	std::cout << limes::hashes::md5 (file.loadAsString());
 	@endcode
 
-	@todo CLI tool
+	@todo CLI tool docs, tests
 
 	@todo HashTable data structure
  */
