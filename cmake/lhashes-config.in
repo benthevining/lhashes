@@ -2,4 +2,9 @@
 
 include ("${CMAKE_CURRENT_LIST_DIR}/Targets.cmake")
 
+if(lhashes_cli_dev IN_LIST lhashes_FIND_COMPONENTS)
+	include ("${CMAKE_CURRENT_LIST_DIR}/CLITargets.cmake")
+	set (lhashes_lhashes_cli_dev_FOUND TRUE)
+endif()
+
 check_required_components (lhashes)
