@@ -18,6 +18,7 @@
 #include <string>		// for basic_string
 #include <string_view>	// for string_view
 #include <sstream>
+#include <iomanip>
 #include "lhashes/lhashes_sha1.h"	 // for sha1
 
 namespace limes::hash
