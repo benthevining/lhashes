@@ -17,9 +17,9 @@
 #include <cstdio>	  // for sprintf, size_t
 #include <cstring>	  // for memcpy, memset
 #include <cstddef>
-#include <string>		// for basic_string
-#include <string_view>	// for string_view
-#include "lhashes/lhashes_hash.h"		// for sha384
+#include <string>				   // for basic_string
+#include <string_view>			   // for string_view
+#include "lhashes/lhashes_hash.h"  // for sha384
 #include "lhashes/lhashes_sha384.h"
 #include "lhashes/lhashes_common.h"
 

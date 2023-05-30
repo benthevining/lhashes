@@ -18,6 +18,13 @@ target_sources (lhashes_cli PRIVATE main.cpp)
 
 target_link_libraries (lhashes_cli PRIVATE limes::lhashes)
 
+if (WIN32)
+	add_custom_command (
+		TARGET lhashes_cli POST_BUILD
+		COMMAND "${CMAKE_COMMAND}" -E copy -t $<TARGET_FILE_DIR:lhashes_cli>
+				$<TARGET_RUNTIME_DLLS:lhashes_cli> USES_TERMINAL COMMAND_EXPAND_LISTS)
+endif ()
+
 install (
 	TARGETS lhashes_cli
 	EXPORT lhashes

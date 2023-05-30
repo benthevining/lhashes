@@ -10,6 +10,17 @@
 #
 # ======================================================================================
 
+function (lhash_copy_dlls target)
+	if (WIN32)
+		add_custom_command (
+			TARGET "${target}" POST_BUILD
+			COMMAND "${CMAKE_COMMAND}" -E copy -t $<TARGET_FILE_DIR:${target}>
+					$<TARGET_RUNTIME_DLLS:${target}> USES_TERMINAL COMMAND_EXPAND_LISTS)
+	endif ()
+endfunction ()
+
+#
+
 include (FetchContent)
 
 FetchContent_Declare (
@@ -35,6 +46,8 @@ target_sources (lhashes_tests PRIVATE md5.cpp sha1.cpp sha224.cpp sha256.cpp sha
 
 target_link_libraries (lhashes_tests PRIVATE Catch2::Catch2WithMain limes::lhashes)
 
+lhash_copy_dlls (lhashes_tests)
+
 # cmake-format: off
 catch_discover_tests (
 	lhashes_tests
@@ -56,6 +69,8 @@ if (LHASH_BENCH)
 	target_sources (lhashes_benchmarks PRIVATE bench.cpp)
 
 	target_link_libraries (lhashes_benchmarks PRIVATE Catch2::Catch2WithMain limes::lhashes)
+
+	lhash_copy_dlls (lhashes_benchmarks)
 
 	add_custom_target (
 		lhashes_bench
