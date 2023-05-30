@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.25 FATAL_ERROR)
 
 project (
 	lhashes
-	VERSION 0.0.1
+	VERSION 1.0.0
 	LANGUAGES CXX C
 	DESCRIPTION "C++ hashes library"
 	HOMEPAGE_URL "https://github.com/benthevining/lhashes/")
