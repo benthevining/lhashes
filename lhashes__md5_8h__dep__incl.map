@@ -1,5 +1,4 @@
 <map id="lhashes_md5.h" name="lhashes_md5.h">
-<area shape="rect" id="Node000001" title="This file defines the hash::MD5 class." alt="" coords="5,5,115,31"/>
-<area shape="rect" id="Node000002" href="$lhashes_8h.html" title="The main header for the limes_hashes library." alt="" coords="21,79,99,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,46,63,79,57,79,57,46"/>
+<area shape="rect" id="node1" title="This file defines the hash::MD5 class." alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node2" href="$lhashes_8h.html" title="The main header for the limes_hashes library." alt="" coords="23,80,107,107"/>
 </map>

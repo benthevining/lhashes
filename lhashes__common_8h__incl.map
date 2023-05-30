@@ -1,7 +1,5 @@
 <map id="lhashes_common.h" name="lhashes_common.h">
-<area shape="rect" id="Node000001" title="This file defines internal utilities common to the various hash algorithms." alt="" coords="93,5,228,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,177,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,33,115,70,111,66,147,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="201,79,261,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,29,211,66,207,70,170,33"/>
+<area shape="rect" id="node1" title="This file defines internal utilities common to the various hash algorithms." alt="" coords="99,5,247,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,192,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="216,80,283,107"/>
 </map>

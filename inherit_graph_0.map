@@ -1,15 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classlimes_1_1hash_1_1_hasher.html" title="A base class representing an object that calculates a hash function." alt="" coords="5,129,144,155"/>
-<area shape="rect" id="Node000001" href="$classlimes_1_1hash_1_1_m_d5.html" title="A Hasher object that calculates an MD5 hash." alt="" coords="202,5,327,31"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="96,117,137,78,190,40,214,29,216,34,193,44,141,82,99,121"/>
-<area shape="rect" id="Node000002" href="$classlimes_1_1hash_1_1_s_h_a1.html" title="A Hasher object that calculates a SHA1 hash." alt="" coords="199,55,330,80"/>
-<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="116,120,191,89,220,78,222,83,193,94,118,125"/>
-<area shape="rect" id="Node000003" href="$classlimes_1_1hash_1_1_s_h_a224.html" title="A Hasher object that calculates a SHA224 hash." alt="" coords="192,104,337,130"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="158,128,191,124,192,129,159,134"/>
-<area shape="rect" id="Node000004" href="$classlimes_1_1hash_1_1_s_h_a256.html" title="A Hasher object that calculates a SHA256 hash." alt="" coords="192,153,337,179"/>
-<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="159,150,192,154,191,160,158,155"/>
-<area shape="rect" id="Node000005" href="$classlimes_1_1hash_1_1_s_h_a384.html" title="A Hasher object that calculates a SHA384 hash." alt="" coords="192,203,337,228"/>
-<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="120,159,193,189,222,200,220,205,191,194,118,164"/>
-<area shape="rect" id="Node000006" href="$classlimes_1_1hash_1_1_s_h_a512.html" title="A Hasher object that calculates a SHA512 hash." alt="" coords="192,252,337,278"/>
-<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="100,164,141,202,193,239,216,249,214,254,190,243,138,206,97,168"/>
+<area shape="rect" id="node1" href="$classlimes_1_1hash_1_1Hasher.html" title="A base class representing an object that calculates a hash function." alt="" coords="5,132,156,159"/>
+<area shape="rect" id="node2" href="$classlimes_1_1hash_1_1MD5.html" title="A Hasher object that calculates an MD5 hash." alt="" coords="215,5,349,32"/>
+<area shape="rect" id="node3" href="$classlimes_1_1hash_1_1SHA1.html" title="A Hasher object that calculates a SHA1 hash." alt="" coords="212,56,352,83"/>
+<area shape="rect" id="node4" href="$classlimes_1_1hash_1_1SHA224.html" title="A Hasher object that calculates a SHA224 hash." alt="" coords="204,107,360,133"/>
+<area shape="rect" id="node5" href="$classlimes_1_1hash_1_1SHA256.html" title="A Hasher object that calculates a SHA256 hash." alt="" coords="204,157,360,184"/>
+<area shape="rect" id="node6" href="$classlimes_1_1hash_1_1SHA384.html" title="A Hasher object that calculates a SHA384 hash." alt="" coords="204,208,360,235"/>
+<area shape="rect" id="node7" href="$classlimes_1_1hash_1_1SHA512.html" title="A Hasher object that calculates a SHA512 hash." alt="" coords="204,259,360,285"/>
 </map>

@@ -1,5 +1,0 @@
-<map id="limes::hash::SHA1" name="limes::hash::SHA1">
-<area shape="rect" id="Node000001" title="A Hasher object that calculates a SHA1 hash." alt="" coords="9,79,140,105"/>
-<area shape="rect" id="Node000002" href="$classlimes_1_1hash_1_1_hasher.html" title="A base class representing an object that calculates a hash function." alt="" coords="5,5,144,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,46,77,79,72,79,72,46"/>
-</map>

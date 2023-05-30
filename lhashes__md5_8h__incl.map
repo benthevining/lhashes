@@ -1,20 +1,10 @@
 <map id="lhashes_md5.h" name="lhashes_md5.h">
-<area shape="rect" id="Node000001" title="This file defines the hash::MD5 class." alt="" coords="181,5,291,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,153,59,178"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,34,171,55,128,81,89,113,55,144,52,140,85,109,125,77,168,50,209,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="83,153,170,178"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,34,174,53,146,81,134,109,129,138,124,137,129,107,142,77,171,49,204,29"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="393,79,453,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="269,29,380,71,378,76,267,34"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="374,153,546,178"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="256,29,331,77,431,142,428,146,328,81,254,34"/>
-<area shape="rect" id="Node000006" href="$lhashes__hash_8h.html" title="This file defines the hash::Hasher class and the hash::hash() free functions." alt="" coords="155,79,317,105"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="239,31,239,64,233,64,233,31"/>
-<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="202,108,73,153,72,148,201,103"/>
-<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="219,107,159,147,156,142,216,103"/>
-<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="275,103,409,145,407,150,273,108"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="287,153,351,178"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="252,103,295,141,292,145,248,107"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="194,153,262,178"/>
-<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="237,105,234,138,228,137,232,105"/>
+<area shape="rect" id="node1" title="This file defines the hash::MD5 class." alt="" coords="196,5,316,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,155,186,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="419,80,485,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="408,155,595,181"/>
+<area shape="rect" id="node6" href="$lhashes__hash_8h.html" title="This file defines the hash::Hasher class and the hash::hash() free functions." alt="" coords="168,80,344,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="313,155,383,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="211,155,288,181"/>
 </map>

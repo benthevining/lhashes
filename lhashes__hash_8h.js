@@ -1,6 +1,6 @@
 var lhashes__hash_8h =
 [
-    [ "limes::hash::Hasher", "classlimes_1_1hash_1_1_hasher.html", "classlimes_1_1hash_1_1_hasher" ],
+    [ "Hasher", "classlimes_1_1hash_1_1Hasher.html", "classlimes_1_1hash_1_1Hasher" ],
     [ "md5", "lhashes__hash_8h.html#a3062e1e11c64939824f4f249890f7157", null ],
     [ "sha1", "lhashes__hash_8h.html#abd0cb74bfc712f826eb603be9f4f56c9", null ],
     [ "sha224", "lhashes__hash_8h.html#a4350bd4392eb85e0fa9d1fb9f8bf79db", null ],
