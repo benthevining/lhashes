@@ -1,5 +1,7 @@
 # lhashes
 
+[![CI](https://github.com/benthevining/lhashes/actions/workflows/ci.yml/badge.svg)](https://github.com/benthevining/lhashes/actions/workflows/ci.yml) [![Build docs](https://github.com/benthevining/lhashes/actions/workflows/docs.yml/badge.svg)](https://github.com/benthevining/lhashes/actions/workflows/docs.yml) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/benthevining/lhashes/main.svg)](https://results.pre-commit.ci/latest/github/benthevining/lhashes/main)
+
 C++ hashing library
 
 ## Features

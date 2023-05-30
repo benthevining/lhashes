@@ -118,7 +118,7 @@ jobs:
     - name: Upload artefact
       uses: actions/upload-artifact@main
       with:
-        name: ${{ matrix.os }}-${{ matrix.preset }}-${{ matrix.shared-libs }}
+        name: ${{ matrix.os }}-${{ matrix.preset }}-${{ matrix.shared-libs }}.zip
         path: deploy/**.zip
         if-no-files-found: error
 
@@ -165,9 +165,6 @@ jobs:
       uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a   # pin@v3
       with:
         path: ${{ github.workspace }}/deploy
-
-    - name: Zip source code
-      run: git archive --format=tar --output=source-code.tar --worktree-attributes HEAD
 
     - name: Run semantic release
       env:
