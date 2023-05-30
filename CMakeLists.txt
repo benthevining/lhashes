@@ -14,8 +14,6 @@ include (CMakeDependentOption)
 cmake_dependent_option (LHASH_TESTS "Build the lhashes tests" "${lhashes_IS_TOP_LEVEL}" "NOT IOS"
 						OFF)
 
-cmake_dependent_option (LHASH_BENCH "Build the lhashes benchmarks" "${LHASH_TESTS}" "NOT IOS" OFF)
-
 option (LHASH_DOCS "Build the lhashes docs" "${lhashes_IS_TOP_LEVEL}")
 
 include (GNUInstallDirs)
@@ -23,7 +21,7 @@ include (GNUInstallDirs)
 set (LHASH_INSTALL_DEST "${CMAKE_INSTALL_LIBDIR}/cmake/lhashes"
 	 CACHE STRING "Path where package files will be installed, relative to the install prefix")
 
-mark_as_advanced (LHASH_INSTALL_DEST LHASH_TESTS LHASH_BENCH LHASH_DOCS)
+mark_as_advanced (LHASH_INSTALL_DEST LHASH_TESTS LHASH_DOCS)
 
 set_property (DIRECTORY APPEND PROPERTY ADDITIONAL_CLEAN_FILES "${CMAKE_CURRENT_LIST_DIR}/logs"
 										"${CMAKE_CURRENT_LIST_DIR}/deploy")
@@ -140,16 +138,6 @@ if (LHASH_TESTS)
 	add_subdirectory (tests)
 
 	include (CTest)
-endif ()
-
-if (LHASH_BENCH)
-	enable_testing ()
-
-	add_subdirectory (bench)
-
-	if (NOT LHASH_TESTS)
-		include (CTest)
-	endif ()
 endif ()
 
 if (LHASH_DOCS)

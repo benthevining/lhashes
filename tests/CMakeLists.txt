@@ -44,3 +44,24 @@ catch_discover_tests (
 		--verbosity high
 	TEST_PREFIX "Limes.hashes.unit.")
 # cmake-format: on
+
+option (LHASH_BENCH "Build the lhashes benchmarks" ON)
+
+mark_as_advanced (LHASH_BENCH)
+
+if (LHASH_BENCH)
+
+	add_executable (lhashes_benchmarks)
+
+	target_sources (lhashes_benchmarks PRIVATE bench.cpp)
+
+	target_link_libraries (lhashes_benchmarks PRIVATE Catch2::Catch2WithMain limes::lhashes)
+
+	add_custom_target (
+		lhashes_bench
+		COMMAND lhashes_benchmarks "[!benchmark]" --order rand --verbosity high
+		COMMENT "Running lhashes benchmarks..."
+		USES_TERMINAL
+		SOURCES bench.cpp)
+
+endif ()
