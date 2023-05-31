@@ -19,6 +19,8 @@
 #include <optional>
 #include "lhashes/lhashes.h"
 
+// TODO: add --version
+
 void printUsage()
 {
 	std::cout << "Usage:\n"
