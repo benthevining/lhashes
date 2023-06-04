@@ -191,7 +191,8 @@ void SHA1::update (const unsigned char* data, std::size_t length)
 	{
 		char sbuf[BLOCK_BYTES] = {};
 
-		const auto count = std::min (length, BLOCK_BYTES - buffer.size());
+		const auto count = std::min (static_cast<size_t>(length),
+									 static_cast<size_t>(BLOCK_BYTES - buffer.size()));
 
 		std::memcpy (sbuf, data, count);
 
