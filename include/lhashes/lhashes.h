@@ -86,11 +86,12 @@
 #pragma once
 
 // IWYU pragma: begin_exports
-#include "./lhashes_hash.h"
-#include "./lhashes_md5.h"
-#include "./lhashes_sha1.h"
-#include "./lhashes_sha224.h"
-#include "./lhashes_sha256.h"
-#include "./lhashes_sha384.h"
-#include "./lhashes_sha512.h"
+#include "lhashes/lhashes_Version.h"
+#include "lhashes/lhashes_hash.h"
+#include "lhashes/lhashes_md5.h"
+#include "lhashes/lhashes_sha1.h"
+#include "lhashes/lhashes_sha224.h"
+#include "lhashes/lhashes_sha256.h"
+#include "lhashes/lhashes_sha384.h"
+#include "lhashes/lhashes_sha512.h"
 // IWYU pragma: end_exports

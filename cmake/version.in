@@ -1,0 +1,9 @@
+#pragma once
+
+#define LHASH_VERSION_MAJOR @lhashes_VERSION_MAJOR@
+
+#define LHASH_VERSION_MINOR @lhashes_VERSION_MINOR@
+
+#define LHASH_VERSION_PATCH @lhashes_VERSION_PATCH@
+
+#define LHASH_VERSION "@lhashes_VERSION@"
