@@ -19,17 +19,18 @@ project (
 	DESCRIPTION "C++ hashes library"
 	HOMEPAGE_URL "https://github.com/benthevining/lhashes/")
 
-set_property (DIRECTORY APPEND PROPERTY LABELS lhashes)
+add_subdirectory (linfra)
+
+limes_default_project_options ()
+
+option (LHASH_TESTS "Build the lhashes tests" "${lhashes_IS_TOP_LEVEL}")
+
+option (LHASH_DOCS "Build the lhashes docs" "${lhashes_IS_TOP_LEVEL}")
 
 include (CMakeDependentOption)
 
-cmake_dependent_option (LHASH_TESTS "Build the lhashes tests" "${lhashes_IS_TOP_LEVEL}" "NOT IOS"
-						OFF)
-
 cmake_dependent_option (LHASH_CLI "Build the lhashes CLI app" "${lhashes_IS_TOP_LEVEL}" "NOT IOS"
 						OFF)
-
-option (LHASH_DOCS "Build the lhashes docs" "${lhashes_IS_TOP_LEVEL}")
 
 include (GNUInstallDirs)
 
@@ -37,22 +38,6 @@ set (LHASH_INSTALL_DEST "${CMAKE_INSTALL_LIBDIR}/cmake/lhashes"
 	 CACHE STRING "Path where package files will be installed, relative to the install prefix")
 
 mark_as_advanced (LHASH_INSTALL_DEST LHASH_TESTS LHASH_DOCS LHASH_CLI)
-
-set_property (DIRECTORY APPEND PROPERTY ADDITIONAL_CLEAN_FILES "${CMAKE_CURRENT_LIST_DIR}/logs"
-										"${CMAKE_CURRENT_LIST_DIR}/deploy")
-
-# use the directory-scoped commands so that Catch2 gets these flags too
-if (EMSCRIPTEN)
-	add_compile_options (-sNO_DISABLE_EXCEPTION_CATCHING -fexceptions)
-	add_link_options (-fexceptions)
-endif ()
-
-set (CMAKE_CXX_VISIBILITY_PRESET hidden)
-set (CMAKE_VISIBILITY_INLINES_HIDDEN ON)
-
-set (CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED "NO")
-set (CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED "NO")
-set (CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "")
 
 add_library (lhashes)
 add_library (limes::lhashes ALIAS lhashes)
