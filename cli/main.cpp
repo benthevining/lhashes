@@ -23,8 +23,8 @@
 
 void printUsage()
 {
-	std::cout << "Usage:\n"
-			  << "lhash <mode> [<input>]\n"
+	std::cout << "Usage:\n\n"
+			  << "lhash <mode> [<input>]\n\n"
 			  << "If <input> is not specified, lhash will read from stdin.\n"
 			  << "Valid modes: md5, sha1, sha224, sha256, sha384, sha512"
 			  << std::endl;
@@ -38,9 +38,9 @@ int main (int argc, char** argv)
 		return EXIT_FAILURE;
 	}
 
-	std::string_view mode { argv[1] };
+	const std::string_view mode { argv[1] };
 
-	if (mode == "help" || mode == "Help")
+	if (mode == "help" || mode == "Help" || mode == "--help" || mode == "-h")
 	{
 		printUsage();
 		return EXIT_SUCCESS;
@@ -74,6 +74,7 @@ int main (int argc, char** argv)
 	if (! type.has_value())
 	{
 		std::cout << "Unknown mode requested: '" << mode << "'" << std::endl;
+		printUsage();
 		return EXIT_FAILURE;
 	}
 

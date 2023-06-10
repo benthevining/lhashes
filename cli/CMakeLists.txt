@@ -10,23 +10,17 @@
 #
 # ======================================================================================
 
-add_executable (lhashes_cli)
+add_executable (lhash)
+add_executable (limes::lhash ALIAS lhash)
 
-set_target_properties (lhashes_cli PROPERTIES OUTPUT_NAME lhash)
+target_sources (lhash PRIVATE main.cpp)
 
-target_sources (lhashes_cli PRIVATE main.cpp)
+target_link_libraries (lhash PRIVATE limes::lhashes)
 
-target_link_libraries (lhashes_cli PRIVATE limes::lhashes)
-
-if (WIN32)
-	add_custom_command (
-		TARGET lhashes_cli POST_BUILD
-		COMMAND "${CMAKE_COMMAND}" -E copy -t $<TARGET_FILE_DIR:lhashes_cli>
-				$<TARGET_RUNTIME_DLLS:lhashes_cli> USES_TERMINAL COMMAND_EXPAND_LISTS)
-endif ()
+limes_copy_dlls (lhash)
 
 install (
-	TARGETS lhashes_cli
+	TARGETS lhash
 	EXPORT lhashes
 	LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT lhashes NAMELINK_COMPONENT lhashes_dev
 	ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT lhashes_dev
@@ -35,5 +29,5 @@ install (
 	DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
 
 if (LHASH_TESTS)
-	# TODO
+	add_subdirectory (test)
 endif ()

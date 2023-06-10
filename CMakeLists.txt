@@ -29,8 +29,8 @@ option (LHASH_DOCS "Build the lhashes docs" "${lhashes_IS_TOP_LEVEL}")
 
 include (CMakeDependentOption)
 
-cmake_dependent_option (LHASH_CLI "Build the lhashes CLI app" "${lhashes_IS_TOP_LEVEL}" "NOT IOS"
-						OFF)
+cmake_dependent_option (LHASH_CLI "Build the lhashes CLI app" "${lhashes_IS_TOP_LEVEL}"
+						"NOT IOS;NOT EMSCRIPTEN" OFF)
 
 include (GNUInstallDirs)
 
@@ -38,6 +38,10 @@ set (LHASH_INSTALL_DEST "${CMAKE_INSTALL_LIBDIR}/cmake/lhashes"
 	 CACHE STRING "Path where package files will be installed, relative to the install prefix")
 
 mark_as_advanced (LHASH_INSTALL_DEST LHASH_TESTS LHASH_DOCS LHASH_CLI)
+
+if (LHASH_TESTS)
+	enable_testing ()
+endif ()
 
 add_library (lhashes)
 add_library (limes::lhashes ALIAS lhashes)
