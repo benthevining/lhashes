@@ -13,21 +13,21 @@
 limes_default_doxygen_settings ()
 
 set (LHASH_DOC_TAGFILE "${CMAKE_CURRENT_LIST_DIR}/../doc/lhashes.tag"
-	 CACHE FILEPATH "Path where the Doxygen tagfile for lhashes will be generated")
+     CACHE FILEPATH "Path where the Doxygen tagfile for lhashes will be generated")
 
 mark_as_advanced (LHASH_DOC_TAGFILE)
 
 file (GLOB headers LIST_DIRECTORIES false CONFIGURE_DEPENDS
-										  "${CMAKE_CURRENT_LIST_DIR}/../include/lhashes/*.h")
+                                          "${CMAKE_CURRENT_LIST_DIR}/../include/lhashes/*.h")
 
 set (DOXYGEN_GENERATE_TAGFILE "${LHASH_DOC_TAGFILE}")
 
 doxygen_add_docs (
-	lhashes_docs ${headers} ${examples} "${DOXYGEN_USE_MDFILE_AS_MAINPAGE}" USE_STAMP_FILE
-	WORKING_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/.." COMMENT "Building lhashes documentation...")
+    lhashes_docs ${headers} ${examples} "${DOXYGEN_USE_MDFILE_AS_MAINPAGE}" USE_STAMP_FILE
+    WORKING_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/.." COMMENT "Building lhashes documentation...")
 
 set_property (
-	TARGET lhashes_docs APPEND PROPERTY ADDITIONAL_CLEAN_FILES "${DOXYGEN_OUTPUT_DIRECTORY}"
-										"${DOXYGEN_WARN_LOGFILE}" "${DOXYGEN_GENERATE_TAGFILE}")
+    TARGET lhashes_docs APPEND PROPERTY ADDITIONAL_CLEAN_FILES "${DOXYGEN_OUTPUT_DIRECTORY}"
+                                        "${DOXYGEN_WARN_LOGFILE}" "${DOXYGEN_GENERATE_TAGFILE}")
 
 limes_add_docs_coverage (lhashes_docs)

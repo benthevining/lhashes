@@ -11,12 +11,12 @@
 # ======================================================================================
 
 target_sources (
-	lhashes
-	PRIVATE lhashes_common.cpp
-			lhashes_hash.cpp
-			lhashes_md5.cpp
-			lhashes_sha1.cpp
-			lhashes_sha224.cpp
-			lhashes_sha256.cpp
-			lhashes_sha384.cpp
-			lhashes_sha512.cpp)
+    lhashes
+    PRIVATE lhashes_common.cpp
+            lhashes_hash.cpp
+            lhashes_md5.cpp
+            lhashes_sha1.cpp
+            lhashes_sha224.cpp
+            lhashes_sha256.cpp
+            lhashes_sha384.cpp
+            lhashes_sha512.cpp)

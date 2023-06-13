@@ -17,11 +17,11 @@ add_executable (lhashes_tests)
 target_sources (lhashes_tests PRIVATE md5.cpp sha1.cpp sha224.cpp sha256.cpp sha384.cpp sha512.cpp)
 
 limes_configure_test_target (
-	lhashes_tests
-	BUNDLE_ID Limes.lhashes.tests
-	VERSION_MAJOR "${lhashes_VERSION_MAJOR}"
-	FULL_VERSION "${lhashes_VERSION}"
-	TEST_CATEGORY hashes)
+    lhashes_tests
+    BUNDLE_ID Limes.lhashes.tests
+    VERSION_MAJOR "${lhashes_VERSION_MAJOR}"
+    FULL_VERSION "${lhashes_VERSION}"
+    TEST_PREFIX limes.hashes.unit.)
 
 target_link_libraries (lhashes_tests PRIVATE limes::lhashes)
 
@@ -31,13 +31,13 @@ mark_as_advanced (LHASH_BENCH)
 
 if (LHASH_BENCH)
 
-	add_executable (lhashes_benchmarks)
+    add_executable (lhashes_benchmarks)
 
-	target_sources (lhashes_benchmarks PRIVATE bench.cpp)
+    target_sources (lhashes_benchmarks PRIVATE bench.cpp)
 
-	target_link_libraries (lhashes_benchmarks PRIVATE Catch2::Catch2WithMain limes::lhashes)
+    target_link_libraries (lhashes_benchmarks PRIVATE Catch2::Catch2WithMain limes::lhashes)
 
-	limes_configure_benchmark_target (lhashes_benchmarks BENCH_TARGET lhashes_bench
-									  LIB_NAME lhashes)
+    limes_configure_benchmark_target (lhashes_benchmarks BENCH_TARGET lhashes_bench
+                                      LIB_NAME lhashes)
 
 endif ()
