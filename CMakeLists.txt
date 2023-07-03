@@ -53,15 +53,12 @@ set_target_properties (lhashes PROPERTIES DEBUG_POSTFIX -d VERSION "${lhashes_VE
 
 set (public_header include/lhashes/lhashes.h)
 
+set (common_headers include/lhashes/lhashes_common.h include/lhashes/lhashes_hash.h)
+
 set (
-    private_headers
-    include/lhashes/lhashes_common.h
-    include/lhashes/lhashes_hash.h
-    include/lhashes/lhashes_md5.h
-    include/lhashes/lhashes_sha1.h
-    include/lhashes/lhashes_sha224.h
-    include/lhashes/lhashes_sha256.h
-    include/lhashes/lhashes_sha384.h
+    types_headers
+    include/lhashes/lhashes_md5.h include/lhashes/lhashes_sha1.h include/lhashes/lhashes_sha224.h
+    include/lhashes/lhashes_sha256.h include/lhashes/lhashes_sha384.h
     include/lhashes/lhashes_sha512.h)
 
 set (generated_headers_dir "${CMAKE_CURRENT_BINARY_DIR}/generated/lhashes")
@@ -84,7 +81,7 @@ configure_file ("${CMAKE_CURRENT_LIST_DIR}/cmake/version.in" "${version_header}"
                 NEWLINE_STYLE UNIX)
 
 target_sources (lhashes # PUBLIC "${public_header}"
-                PRIVATE ${private_headers} "${export_header}" "${version_header}")
+                PRIVATE ${types_headers} ${common_headers} "${export_header}" "${version_header}")
 
 target_include_directories (
     lhashes
@@ -92,14 +89,23 @@ target_include_directories (
            $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/generated>
            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
-install (FILES "${public_header}" "${export_header}" "${version_header}" ${private_headers}
-         DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/lhashes" COMPONENT lhashes_dev)
+install (FILES "${public_header}" "${export_header}" "${version_header}" ${types_headers}
+               ${common_headers} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/lhashes"
+         COMPONENT lhashes_dev)
 
 if (WIN32)
     target_compile_definitions (lhashes PRIVATE NOMINMAX)
 endif ()
 
-add_subdirectory (src)
+set (common_sources src/lhashes_common.cpp src/lhashes_hash.cpp)
+
+set (types_sources src/lhashes_md5.cpp src/lhashes_sha1.cpp src/lhashes_sha224.cpp
+                   src/lhashes_sha256.cpp src/lhashes_sha384.cpp src/lhashes_sha512.cpp)
+
+target_sources (lhashes PRIVATE ${common_sources} ${types_sources})
+
+source_group (common FILES ${common_headers} ${common_sources})
+source_group (types FILES ${types_headers} ${types_sources})
 
 if (LHASH_CLI)
     add_subdirectory (cli)
