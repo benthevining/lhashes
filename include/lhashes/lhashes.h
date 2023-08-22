@@ -66,6 +66,8 @@
 	@todo CLI tool docs, tests
 
 	@todo HashTable data structure
+
+	@todo more hashes: CRC32, Keccak
  */
 
 /** @file
