@@ -48,7 +48,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9   # pin@v3
+      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744   # pin@v3
       with:
         fetch-depth: 1
 
@@ -64,7 +64,7 @@ jobs:
       run: cmake --build --preset ${{ env.CMAKE_PRESET }} --target lhashes_docs
 
     - name: Clone docs branch
-      uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9   # pin@v3
+      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744   # pin@v3
       with:
         ref: docs
         path: tmp
