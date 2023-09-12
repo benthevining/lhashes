@@ -153,7 +153,7 @@ jobs:
         node-version: lts/*
 
     - name: Install NPM dependencies
-      uses: bahmutov/npm-install@5e78a2c1fa3203b777a67764f15380aa7c80d015   # pin@v1.8.34
+      uses: bahmutov/npm-install@c46e3830503dcb831cf4aee3f26b4e6bce8cc9d2   # pin@v1.8.35
       with:
         useLockFile: false
         useRollingCache: true
