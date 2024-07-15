@@ -200,14 +200,14 @@ repos:
 
   # various other formatters
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks.git
-  rev: v2.13.0
+  rev: v2.14.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --preserve-quotes]
 
   # validate JSON/YAML schemas
 - repo: https://github.com/sirosen/check-jsonschema
-  rev: 0.28.6
+  rev: 0.29.0
   hooks:
   - id: check-github-workflows
   - id: check-dependabot
