@@ -162,7 +162,7 @@ jobs:
       run: pip install --upgrade bumpversion
 
     - name: Download artifacts
-      uses: actions/download-artifact@b14cf4c92620c250e1c074ab0a5800e37df86765   # pin@v3
+      uses: actions/download-artifact@95815c38cf2ff2164869cbab79da8d1f422bc89e   # pin@v3
       with:
         path: ${{ github.workspace }}/deploy
 
